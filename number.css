@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+h1{
+
+    width: 100vw;
+    font-size: 3rem;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    background-color:gray;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+     justify-content:space-evenly;
+     text-align: center;
+     background-color: teal;
+}
+p{
+    font-size: 3rem;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#guess{
+    background-color: white;
+    padding: 10px;
+    font-size: 2rem;
+    color: black;
+    border-radius: 1rem;
+    width:40%;
+    border:0px;
+    box-shadow: 5px 5px 10px #444;
+    margin-right: 10px;
+    outline: none;
+    
+    
+}
+
+ button{
+    background-color: white;
+    color:#444;
+    width: 9rem;
+    padding: 5px 5px;
+    height: 3rem;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    border:0px;
+    box-shadow: 5px 5px 10px #444;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+@media screen  and (max-width:700px){
+    #guess{
+        width:90%;
+    }
+    button{
+        margin-top: 10px;
+    }
+    
+    
+    
+}

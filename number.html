@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Random Number</title>
+    <link rel="stylesheet" href="js/number.css">
+</head>
+
+<body>
+    <div><h1>Guess the Number</h1></div>
+    <main class="main">
+        <div><input id="guess">
+        <button onclick="fun()" type="value" min="0" max="10" class="btn">Check</button></div>
+        <div><p id="result">You are Right/Wrong</p></div>
+        <div><p id="score">Score:10</p></div>
+    </main>
+    <script>
+        var a = document.getElementById("guess")
+        var b = document.getElementById("result")
+        //var c=document.getElementById("three")
+        var random = Math.floor(Math.random() * 10)
+        var e = document.getElementById("score")
+        var score = 10
+        function fun() {
+            if (a.value.trim() === "") {
+                alert("Enter the number");
+                return;
+            }
+
+            if (random == a.value) {
+                b.textContent = "Right";
+                alert("You Won");
+                random = Math.floor(Math.random() * 10);
+                score = 10;
+                e.textContent = "Score: " + score;
+            } else {
+                score--;
+                e.textContent = "Score: " + score;
+                b.textContent = "Wrong";
+            }
+
+            if (score == 0) {
+                alert("Game over!!!");
+                a.value=" ";
+                random = Math.floor(Math.random() * 10);
+                score = 10;
+                e.textContent = "Score: " + score;
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>
